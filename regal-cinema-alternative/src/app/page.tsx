@@ -1,8 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 // import ConfirmationModal from '../components/ConfirmationModal';
-import Modal from '../components/Modal'
-import { useGetData } from '@/custom-hook/DetailsData';
 
 // Main Function for web app
 function App() {
@@ -10,9 +8,9 @@ function App() {
   const [endPoint, setEndpoints] = useState<string>('');
   const [container, setContainer] = useState<any[]>([]);
   const [finalPoint, setFinalPoint] = useState<string>('');
-  const [selectionModel, setSelectionModel] = useState<string[]>([])
+  // const [selectionModel, setSelectionModel] = useState<string[]>([])
   const [open, setOpen] = useState(false);
-  const {detailData, getData } = useGetData();
+  // const {detailData, getData } = useGetData();
   // const [confirmationModalOpen, setConfirmationModalOpen] = useState<boolean>(false);
 
 
@@ -87,10 +85,10 @@ const handleClose = () => {
                 Details
               </button>
               {/* Modal */}
-              <Modal
+              {/* <Modal
                 open={open}
                 onClose={handleClose}
-              />
+              /> */}
              
 
             </div>
