@@ -9,7 +9,7 @@ function App() {
   const [container, setContainer] = useState<any[]>([]);
   const [finalPoint, setFinalPoint] = useState<string>('');
   // const [selectionModel, setSelectionModel] = useState<string[]>([])
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   // const {detailData, getData } = useGetData();
   // const [confirmationModalOpen, setConfirmationModalOpen] = useState<boolean>(false);
 
@@ -55,12 +55,12 @@ function App() {
     setFinalPoint(endPoint)
   }
 
-  const handleOpen = () => {
-    setOpen(true)
-}
-const handleClose = () => {
-    setOpen(false)
-}
+//   const handleOpen = () => {
+//     setOpen(true)
+// }
+// const handleClose = () => {
+//     setOpen(false)
+// }
 
   // Main Function Return
   return (
@@ -74,14 +74,17 @@ const handleClose = () => {
 
         {container.map((item, index) => {
 
+          function handleOpen(): void {
+            throw new Error('Function not implemented.');
+          }
+
           return (
             <div key={index} className='h-96 p-3 rounded-lg mt-0 mb-0 ml-auto mr-auto'>
               <img src={item.image} alt="Poster for displayed movie" />
               <p>{item.title}</p>
               <p>{item.id.replace(/\D/g, '')}</p>
               <button
-                type='button'
-                onClick={() => handleOpen()}>
+                type='button'>
                 Details
               </button>
               {/* Modal */}
